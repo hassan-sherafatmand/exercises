@@ -170,3 +170,32 @@ footer p {
 	color: white;
 	padding: 1em 0;
 }
+
+
+
+/* the styles for the Table */
+table{
+	border-collapse: collapse;
+
+}
+thead, tfoot{
+	border-bottom: solid #931420 2px;
+	border-top: solid #931420 2px;
+}
+.line{
+	border-bottom: solid #931420 2px;
+}
+th, td{
+	text-align: left;
+	padding: .3em .7em;
+}
+
+.cost{
+	text-align: right;
+}
+.right{
+	text-align: right;
+	font-weight: bold;
+}
+
+
