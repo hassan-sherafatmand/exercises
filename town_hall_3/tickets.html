@@ -32,22 +32,14 @@
 	</nav>
 	<main>
 		<section>
-			<h1>Become a Member</h1>
+			<h1>Order Form</h1>
     		<form action="register_account.html" method="get"
         		name="registration_form" id="registration_form">
     			<fieldset>
 	        		<legend>Registration Information</legend>
 	        		<label for="email">E-Mail:</label>
 	        		<input type="email" name="email" id="email" autofocus required><br>
-	        		<label for="password">Password:</label>
-	        		<input type="password" name="password" id="password" required
-	                   	   placeholder="At least 6 letters or numbers"
-	                   	   pattern="[a-zA-Z0-9]{6,}" title="Must be at least 6 alphanumeric characters"><br>
-	        		<label for="verify">Verify Password:</label>
-	        		<input type="password" name="verify" id="verify" required><br>
-    			</fieldset>
-    			<fieldset>
-        			<legend>Member Information</legend>
+	        		
         			<label for="first_name">First Name:</label>
 					<input type="text" name="first_name" id="first_name" required><br>
 					<label for="last_name">Last Name:</label>
@@ -66,20 +58,51 @@
 				       	   pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Must be 999-999-999 format"><br>
 				</fieldset>
 				<fieldset>
-					<legend>Membership Information</legend>
-					<label for="membership_type">Membership Type:</label>
+					<legend>Ordering Information</legend>
+					<label for="membership_type">Order Type:</label>
 					<select name="membership_type" id="membership_type">
-				    	<option value="j">Junior</option>
-				    	<option value="r">Regular</option>            
-				    	<option value="c">Charter</option>
+				    	<option value="member">Member package</option>
+				    	<option value="donor">Donor package</option>            
+				    	<option value="single">Single Ticket</option>
 					</select><br>
-					<label for="starting_date">Starting Date:</label>
-					<input type="date" name="starting_date" id="starting_date" required><br>
-					<label for="tickets">Tickets for Guests:</label>
-					<input type="number" name="tickets" id="tickets" value="2" min="1" max="4" placeholder="from 1 to 4"><br>
+					<label for="tickets">Number of tickets:</label>
+					<input type="text" name="tickets" id="tickets"  placeholder="Number of Single Ticckets"><br>
+				</fieldset>
+				<fieldset id="payment-method">
+					<legend>Payment Method</legend>
+					<input type="radio" name="pament-method" id="method1" value="" checked="">
+					<label for="metod1">Bill Me</label>
+					<input type="radio" name="pament-method" id="method2" value="" checked="">
+					<label for="metod2">Credit Card</label>
+				</fieldset>
+				<fieldset>
+					<legend>Credit Card Information</legend>
+					<label for="membership_type">Card Type:</label>
+					<select name="membership_type" id="membership_type">
+				    	<option value="discover">Discover</option>
+				    	<option value="visa">Visa</option>            
+				    	<option value="master">Master</option>
+					</select><br>
+
+					<label for="cc-num">Card Number: </label>
+					<input type="text" name="cc-num" id="cc-num"  placeholder="16 digits"
+						pattern="\d{16}" title="Credit card number is 16 digits"><br>
+					<label for="exp-month">Expiration Date</label>
+					<select name="membership_type" id="exp-month">
+				    	<option value="discover">January</option>
+				    	<option value="visa">Faburary</option>            
+				    	<option value="master">March</option>
+					</select>
+					<select name="membership_type" id="exp-year">
+				    	<option value="discover">2023</option>
+				    	<option value="2024">2024</option>            
+				    	<option value="2025">2025</option>
+						<option value="2026">2026</option>            
+				    	<option value="2027">2027</option>
+					</select><br>
 				</fieldset>
 				<fieldset id="buttons">
-					<legend>Submit Your Membership</legend>
+					<legend>Submit Your Order</legend>
 					<label>&nbsp;</label>
 					<input type="submit" id="submit" value="Submit">
 					<input type="reset" id="reset" value="Reset Fields"><br>
